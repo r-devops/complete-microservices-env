@@ -81,7 +81,7 @@ data "aws_ami" "ami" {
 }
 
 variable "components" {
-  default = [ "rabbitmq", "eureka", "searching", "postgresql", "zipkin", "booking", "financial" ]
+  default = [ "rabbitmq", "eureka", "searching", "postgresql", "zipkin", "booking", "financial", "frontend" ]
   #default = [ "rabbitmq", "postgres", "eureka", "search-service", "booking", "frontend", "zipkin" ]
 }
 
