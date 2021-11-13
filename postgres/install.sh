@@ -18,4 +18,5 @@ EOF
 
 su - postgres -c psql<<EOF
 CREATE USER admin WITH PASSWORD 'admin123';
+CREATE DATABASE booking;
 EOF
