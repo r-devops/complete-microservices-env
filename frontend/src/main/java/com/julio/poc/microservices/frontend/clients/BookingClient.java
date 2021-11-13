@@ -10,8 +10,8 @@ import com.julio.poc.microservices.frontend.config.FeignConfiguration;
 import com.julio.poc.microservices.frontend.dtos.BookingPostDTO;
 import com.julio.poc.microservices.frontend.dtos.RoomPostDTO;
 
-@FeignClient(name = "booking-service", configuration = FeignConfiguration.class)
-@RibbonClient(name = "booking-service", configuration = FeignConfiguration.class)
+@FeignClient(name = "booking", configuration = FeignConfiguration.class)
+@RibbonClient(name = "booking", configuration = FeignConfiguration.class)
 public interface BookingClient {
 
     @PostMapping("/bookings")
