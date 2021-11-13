@@ -57,10 +57,10 @@ resource "null_resource" "hostname" {
       password = "DevOps321"
     }
     inline = [
-      "set-hostname -skip-apply ${element(var.components, count.index)}",
-      "rm -rf /root/complete-microservices-env",
-      "cd /root",
-      "git clone https://github.com/r-devops/complete-microservices-env.git"
+      "set-hostname -skip-apply ${element(var.components, count.index)}"
+#      "rm -rf /root/complete-microservices-env",
+#      "cd /root",
+#      "git clone https://github.com/r-devops/complete-microservices-env.git"
     ]
   }
   provisioner "file" {
