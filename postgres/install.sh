@@ -8,7 +8,8 @@ sudo /usr/pgsql-12/bin/postgresql-12-setup initdb
 sudo systemctl enable --now postgresql-12
 
 sed -i -e "/listen_addresses/ c listen_addresses = '*' " /var/lib/pgsql/12/data/postgresql.conf
-sed -i -e '/0.0.0.0/ d' -e '$ a host all all 0.0.0.0/0 md5' /var/lib/pgsql/12/data/pg_hba.conf
+sed -i -e '/0.0.0.0/ d' /var/lib/pgsql/12/data/pg_hba.conf
+sed -i -e '$ a host all all 0.0.0.0/0 md5' /var/lib/pgsql/12/data/pg_hba.conf
 systemctl restart  --now postgresql-12
 
 su - postgres -c psql<<EOF
