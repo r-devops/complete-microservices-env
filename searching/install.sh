@@ -6,4 +6,4 @@ if [ $? -ne 0 ]; then
 fi
 mvn -Dmaven.test.skip clean package
 export SPRING_PROFILES_ACTIVE=prod
-java -jar target/searching-service-0.0.1-SNAPSHOT.jar
+java -jar target/searching-0.0.1-SNAPSHOT.jar
