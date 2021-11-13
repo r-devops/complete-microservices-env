@@ -16,3 +16,7 @@ su - postgres -c psql<<EOF
 create role readonly;
 CREATE USER admin WITH PASSWORD 'admin123';
 EOF
+
+su - postgres -c psql<<EOF
+CREATE USER admin WITH PASSWORD 'admin123';
+EOF
